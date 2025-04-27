@@ -70,3 +70,94 @@ form input {
 button {
   cursor: pointer;
 }
+
+
+
+
+/* Login Page Styling */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f2f6fc;
+    padding: 2rem;
+  }
+  
+  .login-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  #login-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  #login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  #login-form input:focus {
+    border-color: #0077cc;
+    outline: none;
+  }
+  
+  #login-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #login-form button:hover {
+    background-color: #005fa3;
+  }
+  
+  #error-message {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+
+
+  #profile-button {
+    background-color: #ffffff;
+    color: #0077cc;
+    border: 2px solid #0077cc;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #profile-button:hover {
+    background-color: #0077cc;
+    color: white;
+  }
+  

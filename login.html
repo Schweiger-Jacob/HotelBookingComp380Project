@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-page">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label>Email:
+        <input type="email" id="login-email" required>
+      </label><br>
+      <label>Password:
+        <input type="password" id="login-password" required>
+      </label><br>
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message" style="color:red;"></p>
+  </main>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const errorMessage = document.getElementById('error-message');
+
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+
+      // Simple fake login check
+      if (email === "test@example.com" && password === "password123") {
+        window.location.href = "index.html"; // Redirect to hotel booking
+      } else {
+        errorMessage.innerText = "Incorrect email or password!";
+      }
+    });
+  </script>
+</body>
+</html>

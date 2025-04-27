@@ -9,6 +9,11 @@
 <body>
   <header>
     <h1>Hotel Booking</h1>
+    <header>
+      <h1>Hotel Booking</h1>
+      <button id="profile-button" style="position: absolute; top: 1rem; right: 1rem;">Login</button>
+    </header>
+    
   </header>
 
   <main>
@@ -35,5 +40,12 @@
   </main>
 
   <script src="script.js"></script>
+  <script>
+    const profileButton = document.getElementById('profile-button');
+    profileButton.addEventListener('click', function() {
+      window.location.href = "login.html"; // Go to login page
+    });
+  </script>
+  
 </body>
 </html>
