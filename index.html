@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Hotel Booking</h1>
+  </header>
+
+  <main>
+    <section class="hotel-list" id="hotel-list">
+      <!-- Hotels will be loaded here -->
+    </section>
+
+    <section class="booking-form" id="booking-form" style="display: none;">
+      <h2>Book Hotel</h2>
+      <form id="form">
+        <label>Name: <input type="text" id="name" required></label><br>
+        <label>Email: <input type="email" id="email" required></label><br>
+        <label>Number of Nights: <input type="number" id="nights" min="1" required></label><br>
+        <button type="submit">Confirm Booking</button>
+      </form>
+      <button onclick="goBack()">Back to Hotels</button>
+    </section>
+
+    <section id="confirmation" style="display: none;">
+      <h2>Thank you for your booking!</h2>
+      <p id="confirmation-text"></p>
+      <button onclick="goBack()">Back to Hotels</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
