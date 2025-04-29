@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotels | HotelBooking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <div class="navbar">
+    <div class="logo">HotelBooking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="#">Experiences</a>
+      <a href="#">About</a>
+    </nav>
+    <button id="profile-button">Login</button>
+  </div>
+
+  
+  <h2 style="text-align: center; margin-top: 2rem;">Available Hotels</h2>
+
+  <div class="search-bar">
+    <input type="text" id="search-destination" placeholder="Enter city or hotel name">
+  
+    <select id="search-location">
+      <option value="">Select Location</option>
+      <option value="new york">New York</option>
+      <option value="hawaii">Hawaii</option>
+      <option value="aspen">Aspen</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="dubai">Dubai</option>
+      <option value="reykjavik">Reykjavik</option>
+      <option value="miami">Miami</option>
+      <option value="london">London</option>
+    </select>
+  
+    <select id="search-price">
+      <option value="">Price Range</option>
+      <option value="under300">Under $300</option>
+      <option value="300to500">$300–$500</option>
+      <option value="above500">Above $500</option>
+    </select>
+  
+    <button id="search-button">Search</button>
+  </div>
+  
+
+  <div class="hotel-list">
+    <div class="hotel-list">
+
+        <div class="hotel-list">
+
+            <div class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The Grand Palace">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">The Grand Palace</h3>
+                <p class="hotel-location">New York, USA</p>
+                <p class="hotel-price">From $320/night</p>
+                <button onclick="bookNow('The Grand Palace')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oceanview Resort">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Oceanview Resort</h3>
+                <p class="hotel-location">Hawaii, USA</p>
+                <p class="hotel-price">From $450/night</p>
+                <button onclick="bookNow('Oceanview Resort')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600" alt="Mountain Escape">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Mountain Escape</h3>
+                <p class="hotel-location">Aspen, USA</p>
+                <p class="hotel-price">From $290/night</p>
+                <button onclick="bookNow('Mountain Escape')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://content.r9cdn.net/rimg/himg/a0/6f/d8/leonardo-2049938-11051258_O-516945.jpg" alt="City Lights Hotel">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">City Lights Hotel</h3>
+                <p class="hotel-location">Tokyo, Japan</p>
+                <p class="hotel-price">From $210/night</p>
+                <button onclick="bookNow('City Lights Hotel')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600" alt="Sahara Sands Resort">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Sahara Sands Resort</h3>
+                <p class="hotel-location">Dubai, UAE</p>
+                <p class="hotel-price">From $520/night</p>
+                <button onclick="bookNow('Sahara Sands Resort')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://media.cntraveller.com/photos/6269229cbc5f4696fd3c92dd/4:3/w_2988,h_2241,c_limit/Deplar%20Farm-apr22-pr2.jpeg" alt="Aurora View Inn">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Aurora View Inn</h3>
+                <p class="hotel-location">Reykjavik, Iceland</p>
+                <p class="hotel-price">From $370/night</p>
+                <button onclick="bookNow('Aurora View Inn')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Palm Breeze Hotel">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Palm Breeze Hotel</h3>
+                <p class="hotel-location">Miami, USA</p>
+                <p class="hotel-price">From $260/night</p>
+                <button onclick="bookNow('Palm Breeze Hotel')">Book Now</button>
+              </div>
+            </div>
+          
+            <div class="hotel-card">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/fe/ca/1f/exec-twin-room-view.jpg?w=1200&h=-1&s=1" alt="Royal Garden Suites">
+              <div class="hotel-card-content">
+                <h3 class="hotel-name">Royal Garden Suites</h3>
+                <p class="hotel-location">London, UK</p>
+                <p class="hotel-price">From $340/night</p>
+                <button onclick="bookNow('Royal Garden Suites')">Book Now</button>
+              </div>
+            </div>
+          
+          </div>
+          
+      
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchButton = document.getElementById('search-button');
+        const inputField = document.getElementById('search-destination');
+        const locationSelect = document.getElementById('search-location');
+        const priceSelect = document.getElementById('search-price');
+    
+        searchButton.addEventListener('click', function() {
+            const inputValue = inputField.value.toLowerCase();
+            const selectedLocation = locationSelect.value.toLowerCase();
+            const selectedPrice = priceSelect.value;
+    
+            const hotelCards = document.querySelectorAll('.hotel-card');
+    
+            hotelCards.forEach(card => {
+                const hotelName = card.querySelector('.hotel-name').textContent.toLowerCase();
+                const hotelLocation = card.querySelector('.hotel-location').textContent.toLowerCase();
+                const hotelPrice = parseInt(card.querySelector('.hotel-price').textContent.replace(/\D/g, ''));
+    
+                let matchInput = inputValue === "" || hotelName.includes(inputValue);
+                let matchLocation = selectedLocation === "" || hotelLocation.includes(selectedLocation);
+                let matchPrice = true;
+    
+                if (selectedPrice === "under300") {
+                    matchPrice = hotelPrice < 300;
+                } else if (selectedPrice === "300to500") {
+                    matchPrice = hotelPrice >= 300 && hotelPrice <= 500;
+                } else if (selectedPrice === "above500") {
+                    matchPrice = hotelPrice > 500;
+                }
+    
+                if (matchInput && matchLocation && matchPrice) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+    </script>
+    
+  <script>
+    function bookNow(hotelName) {
+      window.location.href = `reserve.html?hotel=${encodeURIComponent(hotelName)}`;
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchButton = document.querySelector('button'); // Assuming your search button is the first <button>
+        const inputField = document.querySelector('input[type="text"]');
+        const locationSelect = document.querySelector('select');
+        const priceSelect = document.querySelectorAll('select')[1]; // Second select element
+    
+        searchButton.addEventListener('click', function() {
+            const inputValue = inputField.value.toLowerCase();
+            const selectedLocation = locationSelect.value.toLowerCase();
+            const selectedPrice = priceSelect.value;
+    
+            const hotelCards = document.querySelectorAll('.hotel-card');
+    
+            hotelCards.forEach(card => {
+                const hotelName = card.querySelector('.hotel-name').textContent.toLowerCase();
+                const hotelLocation = card.querySelector('.hotel-location').textContent.toLowerCase();
+                const hotelPrice = parseInt(card.querySelector('.hotel-price').textContent.replace(/\D/g, ''));
+    
+                let matchInput = inputValue === "" || hotelName.includes(inputValue);
+                let matchLocation = selectedLocation === "" || hotelLocation.includes(selectedLocation);
+                let matchPrice = true; // default
+    
+                if (selectedPrice === "under300") {
+                    matchPrice = hotelPrice < 300;
+                } else if (selectedPrice === "300to500") {
+                    matchPrice = hotelPrice >= 300 && hotelPrice <= 500;
+                } else if (selectedPrice === "above500") {
+                    matchPrice = hotelPrice > 500;
+                }
+    
+                if (matchInput && matchLocation && matchPrice) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>

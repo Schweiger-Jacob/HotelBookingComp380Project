@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve | HotelBooking</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .reservation-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .reservation-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .reservation-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .reservation-container input,
+    .reservation-container select,
+    .reservation-container button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .reservation-container button {
+      background-color: #0077cc;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .reservation-container button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">HotelBooking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button id="profile-button">Login</button>
+  </div>
+
+  <div class="reservation-container">
+    <h2>Book Your Stay</h2>
+    <form id="reservation-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" id="hotel-name" placeholder="Hotel Name" required />
+      <input type="date" placeholder="Check-in Date" required />
+      <input type="date" placeholder="Check-out Date" required />
+      <input type="number" placeholder="Number of Guests" min="1" required />
+      <button type="submit">Confirm Reservation</button>
+    </form>
+    <p id="confirmation-msg" style="text-align: center; margin-top: 1rem; color: green; display: none;">
+      ✅ Reservation confirmed! A confirmation has been sent to your email.
+    </p>
+  </div>
+
+  <script>
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const hotel = urlParams.get('hotel');
+    if (hotel) {
+      document.getElementById('hotel-name').value = hotel;
+    }
+  
+    // Handle form submission
+    const form = document.getElementById('reservation-form');
+    const msg = document.getElementById('confirmation-msg');
+  
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      msg.style.display = 'block';
+    });
+  </script>
+  
+  
+
+</body>
+</html>
