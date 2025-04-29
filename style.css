@@ -1,163 +1,210 @@
-/* Basic styling for the Hotel Booking site */
 
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #0077cc;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-main {
-  padding: 1rem;
-}
 
-.hotel-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.hotel-card {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
   background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.hotel-card h3 {
-  margin-top: 0;
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0077cc;
 }
 
-.hotel-card button {
-  margin-top: 0.5rem;
+.navbar nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #0077cc;
+}
+
+#profile-button {
   padding: 0.5rem 1rem;
   background-color: #0077cc;
   color: white;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.booking-form, #confirmation {
-  background: white;
-  padding: 1rem;
   border-radius: 8px;
-  margin-top: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-form label {
-  display: block;
+#profile-button:hover {
+  background-color: #005fa3;
+}
+
+
+.hero {
+  background-image: url(https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+}
+
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: white;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+/* Hotel List */
+.hotel-list {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.hotel-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hotel-card-content {
+  padding: 1rem;
+}
+
+.hotel-card-content h3 {
   margin-bottom: 0.5rem;
 }
 
-form input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
+.hotel-card-content p {
   margin-bottom: 1rem;
-  box-sizing: border-box;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-button {
+.hotel-card-content button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hotel-card-content button:hover {
+  background-color: #005fa3;
 }
 
 
 
+/* Search Bar Section */
+.search-bar {
+  background: white;
+  padding: 2rem;
+  margin: -4rem auto 2rem auto;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: relative;
+  z-index: 10;
+}
 
-/* Login Page Styling */
-.login-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #f2f6fc;
-    padding: 2rem;
-  }
-  
-  .login-page h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  #login-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  #login-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  #login-form input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  #login-form input:focus {
-    border-color: #0077cc;
-    outline: none;
-  }
-  
-  #login-form button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #login-form button:hover {
-    background-color: #005fa3;
-  }
-  
-  #error-message {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
+#search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
 
+#search-form input, #search-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-  #profile-button {
-    background-color: #ffffff;
-    color: #0077cc;
-    border: 2px solid #0077cc;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  #profile-button:hover {
-    background-color: #0077cc;
-    color: white;
-  }
-  
+#search-form input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+#search-form button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+  background-color: #005fa3;
+}

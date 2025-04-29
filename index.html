@@ -7,45 +7,60 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hotel Booking</h1>
-    <header>
-      <h1>Hotel Booking</h1>
-      <button id="profile-button" style="position: absolute; top: 1rem; right: 1rem;">Login</button>
-    </header>
-    
+  <header class="navbar">
+    <div class="logo">HotelBooking</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#about">About</a>
+    </nav>
+    <button id="profile-button">Login</button>
   </header>
 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hotel Booking</h1>
+      <p>Find your perfect getaway at the finest hotels.</p>
+    </div>
+  </section>
+  <section class="search-bar">
+    <form id="search-form">
+      <input type="text" placeholder="Destination" required>
+      <input type="date" required>
+      <input type="date" required>
+      <input type="number" placeholder="Guests" min="1" required>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+  
   <main>
     <section class="hotel-list" id="hotel-list">
       <!-- Hotels will be loaded here -->
-    </section>
-
-    <section class="booking-form" id="booking-form" style="display: none;">
-      <h2>Book Hotel</h2>
-      <form id="form">
-        <label>Name: <input type="text" id="name" required></label><br>
-        <label>Email: <input type="email" id="email" required></label><br>
-        <label>Number of Nights: <input type="number" id="nights" min="1" required></label><br>
-        <button type="submit">Confirm Booking</button>
-      </form>
-      <button onclick="goBack()">Back to Hotels</button>
-    </section>
-
-    <section id="confirmation" style="display: none;">
-      <h2>Thank you for your booking!</h2>
-      <p id="confirmation-text"></p>
-      <button onclick="goBack()">Back to Hotels</button>
     </section>
   </main>
 
   <script src="script.js"></script>
   <script>
     const profileButton = document.getElementById('profile-button');
-    profileButton.addEventListener('click', function() {
-      window.location.href = "login.html"; // Go to login page
-    });
+
+    function checkLogin() {
+      const user = localStorage.getItem('user');
+      if (user) {
+        profileButton.textContent = `Welcome, ${user.split('@')[0]}`;
+        profileButton.addEventListener('click', function() {
+          localStorage.removeItem('user');
+          window.location.href = "login.html";
+        });
+      } else {
+        profileButton.textContent = "Login";
+        profileButton.addEventListener('click', function() {
+          window.location.href = "login.html";
+        });
+      }
+    }
+
+    checkLogin();
   </script>
-  
 </body>
 </html>
