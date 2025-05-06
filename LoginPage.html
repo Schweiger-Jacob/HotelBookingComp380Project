@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="loginpagestyle.css" />
-    <title>Login Page</title>
-    
-  </head>
-  <body>
-    <div class="LoginBody">
-      <div class="frame">
-        <div class="HotelBookingHeading"><span>Hotel</span><span>Booking</span></div>
-      </div>
-      <div class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <div class="rectangle"></div>
-          <p class="div">Sign In to your Account</p>
-
-          <!-- Updated inputs with IDs -->
-          <input id="email" class="LoginEmailID" type="text" placeholder="Email ID" />
-          <hr class="line" />
-          <input id="password" class="LoginPassword" type="password" placeholder="Password" />
-          <hr class="line2" />
-
-          <!-- Changed Login button to trigger JS -->
-          <div class="LoginButtonRectangle"></div>
-          <div class="LoginButton" onclick="handleLogin()">Login</div>
-        </div>
-      </div>
-      <div class="lower-rectangle">
-        <a href="Forgot.html" class="ForgetPassword01">Forgot Password</a>
-        <a href="CreateAccount.html" class="CreateAccount01">Create Partner Account</a>
-        <div class="ContactUs01">Contact Us</div>
-      </div>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="loginpagestyle.css" />
+<title>Login Page</title>
+</head>
+<body>
+<div class="LoginBody">
+  <div class="frame">
+    <div class="HotelBookingHeading"><span>Hotel</span><span>Booking</span></div>
+  </div>
+  <div class="overlap-group-wrapper">
+    <div class="overlap-group">
+      <div class="rectangle"></div>
+      <p class="div">Sign In to your Account</p>
+      <!-- Updated inputs with IDs -->
+      <input id="email" class="LoginEmailID" type="text" placeholder="Email ID" />
+      <hr class="line" />
+      <input id="password" class="LoginPassword" type="password" placeholder="Password" />
+      <hr class="line2" />
+      <!-- Changed Login button to trigger JS -->
+      <button class="LoginButton" onclick="handleLogin()">Login</button>
+      <!-- Added error message element -->
+      <p id="error-message" style="color: red; text-align: center; margin-top: 10px;"></p>
     </div>
-  </body>
+  </div>
+  <div class="lower-rectangle">
+    <a href="Forgot.html" class="ForgetPassword01">Forgot Password</a>
+    <a href="CreateAccount.html" class="CreateAccount01">Create Partner Account</a>
+    <div class="ContactUs01">Contact Us</div>
+  </div>
+</div>
+
+<script>
+  // Hard-coded test user
+  const TEST_USER = {
+    email: 'test@example.com',
+    password: 'password123'
+  };
+  
+  // Login handling function
+  function handleLogin() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+    
+    if (email === TEST_USER.email && password === TEST_USER.password) {
+      // Success → go to your hotel booking page
+      window.location.href = 'AdminReservation.html';
+    } else {
+      // Failure → show error text
+      errorMessage.innerText = 'Incorrect email or password!';
+    }
+  }
+</script>
+</body>
 </html>
