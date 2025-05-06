@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Adminstyles.css">
+</head>
+<body>
+    <!--Header -->
+    <div class="frame">
+        <div class="Rectangle1"></div>
+        <div class="HotelBookingHeading"><span>Hotel</span><span>Booking</span></div>
+    </div>    
+    
+    <!-- Search bar section -->
+    <div class="search-bar">
+        <div class="search-container">
+          <input type="text" placeholder="Search Reservations" class="search-input">
+        </div>
+        <div class="header-title">
+          <h2>Reservations</h2>
+        </div>
+        <div class="hotel-info">
+          <h3>Hotel Name | 00000</h3>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+          <li><a href="AdminReservation.html">Reservations</a></li>
+          <li><a href="AdminRates.html">Rates</a></li>
+          <li><a href="AdminMarketing.html">Marketing</a></li>
+          <li><a href="AdminAccount&Property.html">Account & Property</a></li>
+          <li><a href="AdminReport&Summary.html">Report & Summary</a></li>
+          <li><a href="LoginPage.html">Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar2">
+        <div class="date-field">
+            <label class="date-label">From Date</label>
+            <input type="text" class="date-input">
+        </div>
+        
+        <div class="date-field">
+            <label class="date-label">Until Date</label>
+            <input type="text" class="date-input">
+        </div>
+        
+        <button class="ButtonFormat2">Search</button>
+        
+        <hr class="divider-line">
+    </div>
+    
+    <!-- Reservation Header -->
+    <h2 class="reservation-header">Reservation from MM/DD/YYYY - MM/DD/YYYY</h2>
+    
+    <!-- Reservation Card -->
+    <div class="reservation-card">
+        <div class="reservation-info">
+            <div class="info-row">
+                <div class="guest-name">First Name Last Name</div>
+                <div class="booking-dates">MM/DD/YYYY - MM/DD/YYYY</div>
+                <div class="phone-number">+99999999999</div>
+                <div class="total-amount">$0000.0000</div>
+            </div>
+            
+            <div class="card-details-row">
+                <div class="label">Card Details:-</div>
+                <div class="name-on-card">Name on Card</div>
+                <div class="card-number">012345678901</div>
+                <div class="expiry-date">00/00</div>
+                <div class="cvv">0000</div>
+            </div>
+            
+            <div class="room-type-row">
+                <div class="label">Room Type:-</div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn cancel-btn">Cancel</button>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn confirm-btn">Send Confirmation</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <div class="LowerRectangle"></div>
+        <div class="ContactUs">Contact Us</div>
+    </div>
+</body>
+</html>

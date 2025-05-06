@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Marketing - Promotions</title>
+  <link rel="stylesheet" href="Adminstyles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="frame">
+    <div class="Rectangle1"></div>
+    <div class="HotelBookingHeading"><span>Hotel</span><span>Booking</span></div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="search-container">
+      <input type="text" placeholder="Search Reservations" class="search-input">
+    </div>
+    <div class="header-title">
+      <h2>Marketing</h2>
+    </div>
+    <div class="hotel-info">
+      <h3>Hotel Name | 00000</h3>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="AdminReservation.html">Reservations</a></li>
+        <li><a href="AdminRates.html">Rates</a></li>
+        <li><a href="AdminMarketing.html">Marketing</a></li>
+        <li><a href="AdminAccount&Property.html">Account & Property</a></li>
+        <li><a href="AdminReport&Summary.html">Report & Summary</a></li>
+        <li><a href="LoginPage.html">Log Out</a></li>
+      </ul>
+    </div>
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="form-toggle">
+          <label>Activate Promotion:-
+            <input type="checkbox" id="activatePromo">
+            <span class="checkmark"></span>
+          </label>
+          <hr>
+        </div>
+
+        <div id="promoSection">
+          <div class="form-group">
+            <label>Promotion Name:-</label>
+            <input type="text" class="form-control" disabled>
+          </div>
+
+          <div class="form-group date-group">
+            <label>Date:-</label>
+            <input type="text" class="form-control" placeholder="From" disabled>
+            <input type="text" class="form-control" placeholder="Until" disabled>
+          </div>
+
+          <div class="form-group">
+            <label>Days:-</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Sunday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Monday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Tuesday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Wednesday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Thursday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Friday</span></label>
+              <label><input type="checkbox" disabled><span class="checkmark"></span><span class="day-label">Saturday</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Discount(%):-</label>
+            <input type="number" class="form-control discount-input" disabled>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="ButtonFormat2" disabled>Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div>
+    <div class="LowerRectangle"></div>
+    <div class="ContactUs">Contact Us</div>
+  </div>
+
+  <!-- JavaScript to toggle form -->
+   <script>
+  const checkbox = document.getElementById('activatePromo');
+const section = document.getElementById('promoSection');
+const inputs = section.querySelectorAll('input, button');
+
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    section.classList.remove('deactivated');
+    inputs.forEach(el => el.disabled = false);
+  } else {
+    section.classList.add('deactivated');
+    inputs.forEach(el => el.disabled = true);
+  }
+});
+  </script>
+</body>
+</html>
