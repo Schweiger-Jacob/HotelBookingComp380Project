@@ -1,0 +1,203 @@
+/* —— merged globals —— */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Italianno:400|Source+Serif+Pro:300,400|Inter:300,400");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.LoginBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-image: url('/Users/mananbhuva/My Documents/Sem-5/COMP 380 Project/Final/Merged File/wp12649620.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+ .frame {
+  position: relative;
+  width: 100%;
+  height: 143px;
+}
+
+ .HotelBookingHeading {
+  position: absolute;
+  width: 676px;
+  height: 68px;
+  top: 37px;
+  left: 0;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  span:first-child {
+    color: #ffffff; /* color for 'Hotel' */
+  }
+  span:last-child {
+    color: #1db5f1; /* color for 'Booking' */
+  }
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+ .overlap-group-wrapper {
+  position: relative;
+  width: 362px;
+  height: 234px;
+}
+
+ .overlap-group {
+  position: relative;
+  height: 235px;
+  top: 29px;
+}
+
+.rectangle {
+  position: absolute;
+  width: 300px;
+  height: 184px;
+  top: 0px;
+  left: 31px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+ .div {
+  position: absolute;
+  width: 362px;
+  height: 50px;
+  top: 10px;
+  left: 0;
+  font-family: "Source Serif Pro", Helvetica;
+  font-weight: 400;
+  color: rgb(93, 93, 93);
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+ .LoginEmailID {
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  top: 45px;
+  left: 56px;
+  font-family: "Source Serif Pro", Helvetica;
+  color: black;
+  font-size: 12px;
+}
+
+ .line {
+  top: 75px;
+  left: 56px;
+  position: absolute;
+  width: 250px;
+  height: 1px;
+  object-fit: fill;
+  background-color: #124f67;
+}
+
+
+ .LoginPassword {
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  top: 85px;
+  left: 56px;
+  font-family: "Source Serif Pro", Helvetica;
+  color: black;
+  font-size: 12px;
+}
+
+ .line2 {
+  top: 115px;
+  left: 56px;
+  position: absolute;
+  width: 250px;
+  height: 1px;
+  object-fit: fill;
+  background-color: #124f67;
+}
+
+
+.LoginButtonRectangle {
+  position: absolute;
+  width: 250px;
+  height: 39px;
+  top: 130px;
+  left: 56px;
+  background-color: #124f67;
+  border-radius: 5px;
+}
+
+.LoginButton {
+  position: absolute;
+  width: 250px;
+  height: 39px;
+  top: 135px;
+  left: 56px;
+  font-family: "Source Serif Pro", Helvetica;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  line-height: normal;
+  cursor: pointer;
+}
+
+ .lower-rectangle {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.ForgetPassword01, .CreateAccount01, .ContactUs01 {
+  position: absolute;
+  height: 35px;
+  top: 12px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+ .ForgetPassword01 {
+  left: 20px;
+  width: 229px;
+  
+}
+
+ .CreateAccount01 {
+  left: 229px;
+  width: 229px;
+}
+
+ .ContactUs01 {
+  left: 518px;
+  width: 120px;
+}
+
