@@ -152,28 +152,24 @@ a {
   background-color: #124f67;
   border-radius: 5px;
 }
-
 .LoginButton {
   position: absolute;
   width: 250px;
   height: 39px;
-  top: 135px;
+  top: 130px;
   left: 56px;
+
+  /* rectangle styling */
+  background-color: #124f67;
+  border-radius: 5px;
+
+  /* text styling */
   font-family: "Source Serif Pro", Helvetica;
   color: #ffffff;
   font-size: 20px;
   text-align: center;
-  line-height: normal;
+  line-height: 30px;   /* centers the text vertically */
   cursor: pointer;
-}
-
- .lower-rectangle {
-  position: relative;
-  width: 100%;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
 }
 
 .ForgetPassword01, .CreateAccount01, .ContactUs01 {
