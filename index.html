@@ -30,17 +30,31 @@
   </section>
   <section class="search-bar">
     <form id="search-form">
-      <input type="text" placeholder="Destination" required>
-      <input type="date" required>
-      <input type="date" required>
-      <input type="number" placeholder="Guests" min="1" required>
-      <button type="submit">Search</button>
+      <input type="text" id="search-destination" placeholder="Enter city or hotel name" />
+
+      <select id="search-location">
+        <option value="">Select Location</option>
+        <option value="miami">Miami</option>
+        <option value="denver">Denver</option>
+        <option value="los angeles">Los Angeles</option>
+      </select>
+
+      <select id="search-price">
+        <option value="">Price Range</option>
+        <option value="under300">Under $300</option>
+        <option value="300to500">$300–$500</option>
+        <option value="above500">Above $500</option>
+      </select>
+
+      <button id="search-button">Search</button>
+
+
     </form>
   </section>
   
   <main>
     <section class="hotel-list" id="hotel-list">
-      <!-- Hotels will be loaded here -->
+      <!-- hotels will be loaded here -->
     </section>
   </main>
 
@@ -55,12 +69,12 @@
         profileButton.textContent = `Welcome, ${user.split('@')[0]}`;
         profileButton.addEventListener('click', function() {
           localStorage.removeItem('user');
-          window.location.href = "login.html";
+          window.location.href = "LoginPage.html";
         });
       } else {
         profileButton.textContent = "Login";
         profileButton.addEventListener('click', function() {
-          window.location.href = "login.html";
+          window.location.href = "LoginPage.html";
         });
       }
     }
@@ -69,6 +83,8 @@
   </script>
   
   <script src="script.js"></script>
+  
+  <div id="hotel-cards" class="hotel-list"></div>
 
 </body>
 </html>

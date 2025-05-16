@@ -72,23 +72,59 @@
   </div>
 
   <script>
-    
     const urlParams = new URLSearchParams(window.location.search);
     const hotel = urlParams.get('hotel');
     if (hotel) {
       document.getElementById('hotel-name').value = hotel;
     }
   
-    // Handle form submission
     const form = document.getElementById('reservation-form');
     const msg = document.getElementById('confirmation-msg');
   
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
+  
+      const name = form.querySelector('input[placeholder="Full Name"]').value;
+      const email = form.querySelector('input[placeholder="Email Address"]').value;
+      const hotelName = form.querySelector('#hotel-name').value;
+      const guests = form.querySelector('input[placeholder="Number of Guests"]').value;
+  
+      // Send booking to backend
+      fetch('http://ctrl067.dyndns.org:3009/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, hotel: hotelName, nights: guests })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Booking sent to backend:', data);
+      })
+      .catch(err => {
+        console.error('Booking error:', err);
+      });
+  
+      // Send confirmation email
+      fetch('http://ctrl067.dyndns.org:3009/getuserdata', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, hotel: hotelName, nights: guests })
+      })
+      .then(res => {
+        if (res.ok) {
+          console.log('Email sent');
+        } else {
+          console.error('Email failed');
+        }
+      })
+      .catch(err => {
+        console.error('Email error:', err);
+      });
+  
       form.style.display = 'none';
       msg.style.display = 'block';
     });
   </script>
+  
   
   
 

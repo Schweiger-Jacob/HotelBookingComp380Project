@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^7.0.2"
+  },
+  "name": "hotelbookingcomp380project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schweiger-Jacob/HotelBookingComp380Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schweiger-Jacob/HotelBookingComp380Project/issues"
+  },
+  "homepage": "https://github.com/Schweiger-Jacob/HotelBookingComp380Project#readme"
 }

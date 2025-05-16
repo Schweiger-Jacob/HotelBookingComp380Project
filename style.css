@@ -208,3 +208,23 @@ body {
 #search-form button:hover {
   background-color: #005fa3;
 }
+#search-form select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  appearance: none;         /* Removes default styling in some browsers */
+  -webkit-appearance: none; 
+  -moz-appearance: none;    
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+#search-form select:focus {
+  border-color: #0077cc;
+  outline: none;
+}
