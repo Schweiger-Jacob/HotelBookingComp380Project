@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "11a8ca69-2853-46c4-a9bf-9ed6daa1a114",
+		"name": "CSUN Project 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36827632"
+	},
+	"item": [
+		{
+			"name": "getAlluserdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getuserdata",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getuserdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getuserdata/3",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getuserdata",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllbookingdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getbookingdata",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getbookingdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getbookingdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getbookingdata/4",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getbookingdata",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllhoteldata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/gethoteldata",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"gethoteldata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gethoteldata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/gethoteldata/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"gethoteldata",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllroomsdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getroomsdata",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getroomsdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getroomsdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/getroomsdata/1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"getroomsdata",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test User qqq\",\n    \"date_of_birth\": \"01-01-2004\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.12:3000/users",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/hotel",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/rooms",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.12:3000/bookings",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
